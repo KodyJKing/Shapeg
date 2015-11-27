@@ -1,0 +1,8 @@
+c:\users\kody\documents\visual studio 2015\Projects\PEG\PEG\bin\Debug\PEG.exe.config
+C:\Users\Kody\Documents\Visual Studio 2015\Projects\PEG\PEG\bin\Debug\PEG.exe
+C:\Users\Kody\Documents\Visual Studio 2015\Projects\PEG\PEG\bin\Debug\PEG.pdb
+C:\Users\Kody\Documents\Visual Studio 2015\Projects\PEG\PEG\obj\Debug\PEG.exe
+C:\Users\Kody\Documents\Visual Studio 2015\Projects\PEG\PEG\obj\Debug\PEG.pdb
+C:\Users\Kody\documents\visual studio 2015\Projects\PEG\PEG\obj\Debug\PEG.csprojResolveAssemblyReference.cache
+C:\Users\Kody\documents\visual studio 2015\Projects\PEG\PEG\obj\Debug\PEG.Properties.Resources.resources
+C:\Users\Kody\documents\visual studio 2015\Projects\PEG\PEG\obj\Debug\PEG.csproj.GenerateResource.Cache
