@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PEG", "PEG\PEG.csproj", "{9D2C0B92-895A-4C6F-BA23-27D56EE78E3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleLang", "DisCLang\ExampleLang.csproj", "{EF3CFB4D-EAFA-4E0F-864F-1DFC115B3720}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleLang", "ExampleLang\ExampleLang.csproj", "{EF3CFB4D-EAFA-4E0F-864F-1DFC115B3720}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

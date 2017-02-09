@@ -7,8 +7,8 @@
     <ProjectGuid>{EF3CFB4D-EAFA-4E0F-864F-1DFC115B3720}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DisCLang</RootNamespace>
-    <AssemblyName>DisCLang</AssemblyName>
+    <RootNamespace>ExampleLang</RootNamespace>
+    <AssemblyName>ExampleLang</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
