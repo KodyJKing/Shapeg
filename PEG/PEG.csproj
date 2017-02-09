@@ -61,6 +61,7 @@
     <Compile Include="Rules\RuleCharRange.cs" />
     <Compile Include="Rules\RuleIgnore.cs" />
     <Compile Include="Rules\RuleLiteral.cs" />
+    <Compile Include="Rules\RuleOption.cs" />
     <Compile Include="Rules\RuleReference.cs" />
     <Compile Include="Rules\RuleEither.cs" />
     <Compile Include="Rules\RuleNot.cs" />

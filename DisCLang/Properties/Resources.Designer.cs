@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DisCLang.Properties {
+namespace ExampleLang.Properties {
     using System;
     
     

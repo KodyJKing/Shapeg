@@ -31,7 +31,7 @@ namespace PEG.Rules
 
         public override string expectation()
         {
-            return "\"" + literal + "\"";
+            return literal.Equals("\0") ? "EOF" : "\"" + literal + "\"";
         }
     }
 }

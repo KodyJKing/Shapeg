@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using PEG;
 
-namespace DisCLang
+namespace ExampleLang
 {
     class Program : Shorthand
     {
         static void Main(string[] args)
         {
-            DisCParser.parse(Properties.Resources.ExampleSource);
+            AST program = ExampleParser.parse(Properties.Resources.ExampleSource);
+            ExampleInterpreter.run(program, new Dictionary<string, object>());
         }
     }
 }

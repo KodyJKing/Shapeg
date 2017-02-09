@@ -13,7 +13,7 @@ namespace PEG
 
         private Stack<AST> results;
 
-        private Stack<TextLocation> previousLocations;
+        private Stack<TextLocation> pastLocations;
         private TextLocation location;
 
         public Debugger debugger;
@@ -32,7 +32,7 @@ namespace PEG
         public Boolean parse(Rule rule)
         {
             results = new Stack<AST>();
-            previousLocations = new Stack<TextLocation>();
+            pastLocations = new Stack<TextLocation>();
             location = new TextLocation();
             debugger = new Debugger();
             openBranch();
@@ -53,13 +53,13 @@ namespace PEG
         public void start()
         {
             openBranch(); //Add parsed values to new branch so they can be discarded if the match fails.
-            previousLocations.Push(location);
+            pastLocations.Push(location);
         }
 
         public void end(Boolean success)
         {
             mergeBranch(success); //If the match passed, merge the parsed values into its parent's branch. Otherwise discrard the branch.
-            TextLocation previousLoc = previousLocations.Pop();
+            TextLocation previousLoc = pastLocations.Pop();
             if (!success)
             {
                 location = previousLoc;

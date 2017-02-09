@@ -1,1 +1,4 @@
-1+"hello"
+a = 1+1;
+b = 33*a;
+a = b;
+print(a);

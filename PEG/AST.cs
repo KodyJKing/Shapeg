@@ -11,7 +11,7 @@ namespace PEG
         public String text;
         public String type;
 
-        List<AST> branches;
+        public List<AST> branches;
 
         public AST this[int i]
         {

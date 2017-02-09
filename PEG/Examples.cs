@@ -27,13 +27,13 @@ namespace PEG
             //doingMath();
             //parseGrammar();
 
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
         public void basicParsing()
         {
             Parser parser = new Parser("Hello Parsing!"); //Something to parse!
-            Rule exampleRule = l("Hello Parsing!"); //Matches literal: "Hello Parsing!"
+            Rule exampleRule = l("Hello Parsing!") & EOF; //Matches literal: "Hello Parsing!"
             print(parser.parse(exampleRule)); //Will determine if the rule matches the given text.
             print(parser.debugger.message());
         }
@@ -56,7 +56,7 @@ namespace PEG
             //Here we will parse many letters to parse words, and many words to parse a sentence.
 
             Parser p0 = new Parser("This is a sentence."); //Should succeed
-            Parser p1 = new Parser("This is a bigger sentents."); //Should succeed
+            Parser p1 = new Parser("This is a bigger sentence."); //Should succeed
             Parser p2 = new Parser("This lacks punctuation and shouldnt parse"); //Should fail
 
             Rule period = l(".");
@@ -66,7 +66,7 @@ namespace PEG
 
             print(p0.parse(sententce));
             print(p1.parse(sententce));
-            print(p1.parse(sententce));
+            print(p2.parse(sententce));
         }
 
         public void usingGrammars()
@@ -92,7 +92,7 @@ namespace PEG
 
         public void gettingResults()
         {
-            //Here well parse a simple list of numbers but for the first time we'll look at the results, not just wether or not it matched.
+            //Here well parse a simple list of numbers but for the first time we'll look at the results, not just whether or not it matched.
 
             Rule number = ~one(NUM); // ~rule returns the TEXT matched by rule instead of returning the rule's normal result. NUM matches a single numeric character.
             Rule comma = -l(","); // We don't need to see the commas, -rule matches the rule but returns no values.
@@ -110,7 +110,7 @@ namespace PEG
 
         public void doingMath()
         {
-            //Here we will parse a more complicated expression and do something with the resutls. We will parse mathematical expressions on integers with operations +, *, ^.
+            //Here we will parse a more complicated expression and do something with the results. We will parse mathematical expressions on integers with operations +, *, ^.
 
             Grammar g = new Grammar();
             Rule lpar = -l("(");
@@ -201,8 +201,10 @@ namespace PEG
             g["parenthesis"] = lpar & r("seq") & rpar;
 
             Parser p = new Parser(Properties.Resources.Grammar, g); //Source is Resourses.Grammar
-            print(p.parse(r("grammar") & -EOF));
-            print(p.debugger.message());
+            Boolean success = p.parse(r("grammar") & -EOF);
+            print(success ? "Successfully parsed!" : "Failed to parse!");
+            if(!success)
+                print(p.debugger.message());
             print(p.getResult());
         }
     }

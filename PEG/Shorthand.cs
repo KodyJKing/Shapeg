@@ -40,6 +40,11 @@ namespace PEG
             return new RuleOneplus(rule);
         }
 
+        public static Rule opt(Rule rule)
+        {
+            return new RuleOption(rule);
+        }
+
         public static Rule chars(char lower, char upper, Boolean inverted = false)
         {
             return new RuleCharRange(lower, upper, inverted);
